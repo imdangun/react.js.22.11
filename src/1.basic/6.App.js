@@ -1,4 +1,4 @@
-import Counter from './6.Counter'
+import Counter from './6.useState'
 
 function App() {
     return <Counter/>

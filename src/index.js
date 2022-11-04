@@ -6,7 +6,9 @@ import ReactDOM from 'react-dom/client'
 //import App from './1.basic/4.App'
 //import App from './1.basic/5.App'
 //import App from './1.basic/6.App'
-import App from './1.basic/7.App'
+//import App from './1.basic/7.App'
+//import App from './1.basic/8.App'
+import App from './1.basic/9.App'
 
 const root = document.getElementById('root')
 
