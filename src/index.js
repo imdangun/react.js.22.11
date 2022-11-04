@@ -8,7 +8,9 @@ import ReactDOM from 'react-dom/client'
 //import App from './1.basic/6.App'
 //import App from './1.basic/7.App'
 //import App from './1.basic/8.App'
-import App from './1.basic/9.App'
+//import App from './1.basic/9.App'
+//import App from './1.basic/10.App'
+import App from './1.basic/11.App'
 
 const root = document.getElementById('root')
 
