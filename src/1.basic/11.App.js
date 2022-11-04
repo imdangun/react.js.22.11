@@ -23,7 +23,8 @@ function App() {
         const user = {
             userId: userId.current,
             username,
-            email
+            email,
+            isActive: false //3.
         }
         /*1.
         setUsers([
@@ -40,8 +41,16 @@ function App() {
 
         userId.current++
     }
-    //2.
+    //2.삭제
     const onRemove = userId => setUsers(users.filter(user => user.userId !== userId))
+
+    //3.수정
+    const onToggle = userId => setUsers(
+        users.map(user => user.userId === userId ? {
+            ...user,
+            isActive: !user.isActive
+        } : user)
+    )
 
     return (
         <>
@@ -50,7 +59,9 @@ function App() {
                 email={email}
                 onChange={onChange}
                 onCreate={onCreate}/><hr/>
-            <Users users={users} onRemove={onRemove}/> {/*2.*/}
+            <Users users={users} 
+                onRemove={onRemove} 
+                onToggle={onToggle}/> {/*2.*/} {/*3.*/}
         </>
     )
 }

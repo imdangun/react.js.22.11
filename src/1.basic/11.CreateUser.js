@@ -4,11 +4,11 @@ function CreateUser({username, email, onChange, onCreate}) {
             <input name='username'
                 placeholder='이름'
                 onChange={onChange}
-                value={username}/>
+                value={username}/> 
             <input name='email'
                 placeholder='email'
                 onChange={onChange}
-                value={email}/>
+                value={email}/> 
             <button onClick={onCreate}>추가</button>
         </div>
     )
