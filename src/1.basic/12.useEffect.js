@@ -4,9 +4,9 @@ function Counter() {
     const [count, setCount] = useState(0);    
   
     useEffect(() => {
-        console.log(`${count} mount.`)
-        return () => console.log(`${count} unmount.`)
-    }, [])
+        console.log(`${count}: display.`)
+        return () => console.log(`${count}: clear.`)
+    }, [count])
   
     return (
         <div>
@@ -20,9 +20,12 @@ export default Counter
 
 /*
 useEffect(callback, []):
-    component가 최초 mount될때 callback이 호출된다.
-    callback의 retrun cleanup function: component가 최후 unmount될때 호출된다.
+    component가 mount될때 callback이 호출된다.
+    callback에서 retrun한 cleanup function: 
+        component가 unmount될때 호출된다.
 useEffect(callback, [deps]):
-    deps가 변경될 때마다 unmount에 따른 cleanup 실행하고,
-    mount에 따른 callback 실행한다.
+    위를 포함한다.
+    deps 가 바뀔때마 rerendering한다.
+    rerendering 직전에 cleanup 을
+    redendering 직후에 callback 을 실행한다.
 */    

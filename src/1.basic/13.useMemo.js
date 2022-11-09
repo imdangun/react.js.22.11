@@ -28,10 +28,11 @@ function calcPrize(number) {
 export default Card
 
 /*
-useMemo(callback, []):
-    component가 mount 될 때 callback 으로 값을 설정한다.
+useMemo(fn, []):
+    component가 mount 될 때 fn 을 호출해서 그 리턴값을 memoization 한다.
     그후엔, memoization된 값을 재활용한다.
-useMemo(callback, [deps]):
-    component가 mount 될 때 callback 으로 값을 설정한다.
+useMemo(fn, [deps]):
+    component가 mount 될 때 fn 을 호출해서 그 리턴값을 memoization 한다.
     deps값이 수정될 때마다, callback 을 호출한다.
+    deps값이 수정 안 되면, callback을 호출 안 하고, 이전값을 재활용한다.
 */
