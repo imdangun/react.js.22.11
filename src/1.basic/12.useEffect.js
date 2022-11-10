@@ -19,13 +19,12 @@ function Counter() {
 export default Counter
 
 /*
-useEffect(callback, []):
-    component가 mount될때 callback이 호출된다.
+useEffect(fn, []):
+    component가 mount될때 fn이 호출된다.
     callback에서 retrun한 cleanup function: 
-        component가 unmount될때 호출된다.
-useEffect(callback, [deps]):
-    위를 포함한다.
-    deps 가 바뀔때마 rerendering한다.
-    rerendering 직전에 cleanup 을
-    redendering 직후에 callback 을 실행한다.
+        component가 unmount 직전에 호출된다.
+useEffect(fn, [deps]):
+    위를 포함한다. deps 변경되어 rerendering 한다.
+    rerendering 직전에 cleanup fn을
+    redendering 직후에 fn 을 실행한다.
 */    
