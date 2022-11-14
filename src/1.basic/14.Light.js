@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react' //1.
 
 function Light({room, on, toggle}) {
     console.log({room, on})
